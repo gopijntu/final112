@@ -35,11 +35,6 @@ abstract class AppDatabase : RoomDatabase() {
 
         fun get(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
-                val instance = INSTANCE
-                if (instance != null) {
-                    return instance
-                }
-
                 val prefs = CryptoPrefs(context)
                 val passphrase: CharArray = (prefs.getString("master_hash", null) ?: "fallback-key").toCharArray()
                 val factory = SupportFactory(SQLiteDatabase.getBytes(passphrase))
@@ -55,6 +50,35 @@ abstract class AppDatabase : RoomDatabase() {
                 INSTANCE = inst
                 inst
             }
+        }
+
+        /**
+         * Re-encrypt the database safely when changing password
+         */
+        fun changeDatabasePassword(context: Context, oldPassword: String, newPassword: String) {
+            // Close current Room instance
+            INSTANCE?.close()
+            INSTANCE = null
+
+            val dbFile = context.getDatabasePath(DATABASE_NAME)
+            if (dbFile.exists()) {
+                // Open SQLCipher DB with old password
+                val db = SQLiteDatabase.openDatabase(
+                    dbFile.path,
+                    oldPassword.toCharArray(),
+                    null,
+                    SQLiteDatabase.OPEN_READWRITE
+                )
+                db.changePassword(newPassword.toCharArray())
+                db.close()
+            }
+
+            // Update stored master password
+            val prefs = CryptoPrefs(context)
+            prefs.putString("master_hash", newPassword)
+
+            // Reinitialize Room
+            get(context)
         }
 
         fun closeInstance() {

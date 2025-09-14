@@ -30,5 +30,7 @@
     <color name="glow_cyan">#00FFFF</color>
     <color name="transparent_neon">#0000FFFF</color>
     <color name="setup_background">#121212</color> <!-- dark background -->
+    <color name="gray_hint">#888888</color>
+
 
 </resources>

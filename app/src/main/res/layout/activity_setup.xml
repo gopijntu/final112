@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@drawable/login_background">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Setup"
-            app:titleTextColor="@android:color/black"/>
+            app:titleTextColor="@android:color/white"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -26,121 +26,141 @@
         <LinearLayout
             android:orientation="vertical"
             android:padding="32dp"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!-- Name -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxWidth="360dp"
                 android:hint="Your Name"
-                app:boxBackgroundMode="filled"
-                app:boxBackgroundColor="@android:color/white">
+                app:boxStrokeColor="#3A5F9E"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:boxBackgroundColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"/>
+                    android:textColor="#000000"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password -->
+            <!-- Master Password -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:maxWidth="360dp"
                 android:hint="Master Password"
-                app:passwordToggleEnabled="true"
-                app:boxBackgroundMode="filled"
-                app:boxBackgroundColor="@android:color/white">
+                android:layout_marginTop="16dp"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="#3A5F9E"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:boxBackgroundColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"/>
+                    android:textColor="#000000"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Security Question 1 -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:maxWidth="360dp"
                 android:hint="Security Question 1"
-                app:boxBackgroundMode="filled"
-                app:boxBackgroundColor="@android:color/white">
+                android:layout_marginTop="24dp"
+                app:boxStrokeColor="#3A5F9E"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:boxBackgroundColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etQ1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"/>
+                    android:textColor="#000000"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Answer 1 -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:maxWidth="360dp"
                 android:hint="Answer 1"
-                app:boxBackgroundMode="filled"
-                app:boxBackgroundColor="@android:color/white">
+                android:layout_marginTop="16dp"
+                app:boxStrokeColor="#3A5F9E"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:boxBackgroundColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etA1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"/>
+                    android:textColor="#000000"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Security Question 2 -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:maxWidth="360dp"
                 android:hint="Security Question 2"
-                app:boxBackgroundMode="filled"
-                app:boxBackgroundColor="@android:color/white">
+                android:layout_marginTop="24dp"
+                app:boxStrokeColor="#3A5F9E"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:boxBackgroundColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etQ2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"/>
+                    android:textColor="#000000"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Answer 2 -->
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:maxWidth="360dp"
                 android:hint="Answer 2"
-                app:boxBackgroundMode="filled"
-                app:boxBackgroundColor="@android:color/white">
+                android:layout_marginTop="16dp"
+                app:boxStrokeColor="#3A5F9E"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:boxBackgroundColor="#E0E0E0">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etA2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"/>
+                    android:textColor="#000000"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Save & Continue Button with blue background -->
+            <!-- Save & Continue Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSave"
+                style="@style/PillButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxWidth="360dp"
                 android:layout_marginTop="32dp"
                 android:text="Save &amp; Continue"
-                android:backgroundTint="@color/primary"
-                android:textColor="@android:color/white"/>
+                android:background="@drawable/button_gradient_full"/>
 
             <TextView
                 android:id="@+id/tvFooter"
@@ -148,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Designed &amp; Created by Gopinath Kumbha"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="16dp" />
 
