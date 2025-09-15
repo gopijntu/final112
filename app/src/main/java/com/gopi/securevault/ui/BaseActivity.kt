@@ -30,12 +30,12 @@ open class BaseActivity : AppCompatActivity() {
     }
 
 
-    override fun dispatchTouchEvent(ev: android.view.MotionEvent?): Boolean {
+    override fun dispatchTouchEvent(ev: android.view.MotionEvent): Boolean {
         resetLogoutTimer()
         return super.dispatchTouchEvent(ev)
     }
 
-    override fun dispatchKeyEvent(event: android.view.KeyEvent?): Boolean {
+    override fun dispatchKeyEvent(event: android.view.KeyEvent): Boolean {
         resetLogoutTimer()
         return super.dispatchKeyEvent(event)
     }
