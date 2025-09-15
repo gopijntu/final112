@@ -26,9 +26,17 @@ open class BaseActivity : AppCompatActivity() {
        //     WindowManager.LayoutParams.FLAG_SECURE
        // )
         window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE)
+    }
+
+    override fun onResume() {
+        super.onResume()
         resetLogoutTimer()
     }
 
+    override fun onPause() {
+        super.onPause()
+        logoutHandler.removeCallbacks(logoutRunnable)
+    }
 
     override fun dispatchTouchEvent(ev: android.view.MotionEvent): Boolean {
         resetLogoutTimer()
