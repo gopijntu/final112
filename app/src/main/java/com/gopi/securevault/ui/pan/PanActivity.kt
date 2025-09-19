@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 
-class PanActivity : AppCompatActivity() {
+class PanActivity : BaseActivity() {
     private lateinit var binding: ActivityPanBinding
     private var selectedFileUri: Uri? = null
     private val dao by lazy { AppDatabase.get(this).panDao() }

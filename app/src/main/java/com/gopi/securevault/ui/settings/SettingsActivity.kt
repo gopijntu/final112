@@ -16,7 +16,7 @@ import java.io.File
 
 import com.gopi.securevault.databinding.ActivitySettingsBinding
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySettingsBinding
 

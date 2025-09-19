@@ -26,7 +26,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 
-class MiscActivity : AppCompatActivity() {
+class MiscActivity : BaseActivity() {
     private lateinit var binding: ActivityMiscBinding
     private var selectedFileUri: Uri? = null
     private val dao by lazy { AppDatabase.get(this).miscDao() }

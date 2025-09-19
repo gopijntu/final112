@@ -17,7 +17,7 @@ import com.gopi.securevault.util.CryptoPrefs
 import com.gopi.securevault.util.PasswordUtils
 import kotlinx.coroutines.launch
 
-class BackupRestoreActivity : AppCompatActivity() {
+class BackupRestoreActivity : BaseActivity() {
 
     private lateinit var binding: ActivityBackupRestoreBinding
     private lateinit var backupManager: BackupManager

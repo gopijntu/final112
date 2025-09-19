@@ -10,7 +10,7 @@ import com.gopi.securevault.util.CryptoPrefs
 import com.gopi.securevault.util.PasswordUtils
 import net.sqlcipher.database.SQLiteDatabase
 
-class ChangePasswordActivity : AppCompatActivity() {
+class ChangePasswordActivity : BaseActivity() {
 
     private lateinit var binding: ActivityChangePasswordBinding
     private lateinit var prefs: CryptoPrefs

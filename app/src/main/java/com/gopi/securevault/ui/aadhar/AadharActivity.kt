@@ -26,7 +26,7 @@ import com.gopi.securevault.util.AppConstants
 import java.io.File
 import java.io.FileOutputStream
 
-class AadharActivity : AppCompatActivity() {
+class AadharActivity : BaseActivity() {
     private lateinit var binding: ActivityAadharBinding
     private var selectedFileUri: Uri? = null
     private val dao by lazy { AppDatabase.get(this).aadharDao() }

@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 
-class VoterIdActivity : AppCompatActivity() {
+class VoterIdActivity : BaseActivity() {
     private lateinit var binding: ActivityVoterIdBinding
     private var selectedFileUri: Uri? = null
     private val dao by lazy { AppDatabase.get(this).voterIdDao() }
