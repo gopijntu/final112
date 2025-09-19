@@ -3,7 +3,7 @@ package com.gopi.securevault.ui.auth
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import com.gopi.securevault.ui.BaseActivity
 import com.gopi.securevault.databinding.ActivityChangePasswordBinding
 import com.gopi.securevault.data.db.AppDatabase
 import com.gopi.securevault.util.CryptoPrefs
