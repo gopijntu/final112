@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
+import com.gopi.securevault.ui.BaseActivity
 import androidx.lifecycle.lifecycleScope
 import com.gopi.securevault.R
 import com.gopi.securevault.backup.BackupManager

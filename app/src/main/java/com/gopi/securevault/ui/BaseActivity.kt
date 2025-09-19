@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.KeyEvent
+import android.view.MotionEvent
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.gopi.securevault.ui.auth.LoginActivity
@@ -21,10 +23,10 @@ open class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // 🔒 Prevent screenshots & screen recording
-       // window.setFlags(
-       //     WindowManager.LayoutParams.FLAG_SECURE,
-       //     WindowManager.LayoutParams.FLAG_SECURE
-       // )
+        // window.setFlags(
+        //     WindowManager.LayoutParams.FLAG_SECURE,
+        //     WindowManager.LayoutParams.FLAG_SECURE
+        // )
         window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE)
     }
 
@@ -38,12 +40,12 @@ open class BaseActivity : AppCompatActivity() {
         logoutHandler.removeCallbacks(logoutRunnable)
     }
 
-    override fun dispatchTouchEvent(ev: android.view.MotionEvent): Boolean {
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         resetLogoutTimer()
         return super.dispatchTouchEvent(ev)
     }
 
-    override fun dispatchKeyEvent(event: android.view.KeyEvent): Boolean {
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         resetLogoutTimer()
         return super.dispatchKeyEvent(event)
     }

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.content.Intent
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import com.gopi.securevault.ui.BaseActivity
 import com.gopi.securevault.R
 import com.gopi.securevault.ui.auth.ChangePasswordActivity
 import com.gopi.securevault.ui.backup.BackupRestoreActivity
