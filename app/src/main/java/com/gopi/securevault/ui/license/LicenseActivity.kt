@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 
-class LicenseActivity : AppCompatActivity() {
+class LicenseActivity : BaseActivity() {
     private lateinit var binding: ActivityLicenseBinding
     private var selectedFileUri: Uri? = null
     private val dao by lazy { AppDatabase.get(this).licenseDao() }

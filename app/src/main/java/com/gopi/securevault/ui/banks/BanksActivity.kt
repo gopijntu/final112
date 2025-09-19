@@ -20,7 +20,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import androidx.appcompat.widget.TooltipCompat
 
-class BanksActivity : AppCompatActivity() {
+class BanksActivity : BaseActivity() {
     private lateinit var binding: ActivityBanksBinding
     private val dao by lazy { AppDatabase.get(this).bankDao() }
     private val adapter = BankAdapter(

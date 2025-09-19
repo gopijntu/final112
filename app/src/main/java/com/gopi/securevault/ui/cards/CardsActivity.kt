@@ -20,7 +20,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import androidx.appcompat.widget.TooltipCompat
 
-class CardsActivity : AppCompatActivity() {
+class CardsActivity : BaseActivity() {
     private lateinit var binding: ActivityCardsBinding
     private val dao by lazy { AppDatabase.get(this).cardDao() }
     private val adapter = CardAdapter(
